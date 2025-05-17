@@ -1,21 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',
-  basePath: process.env.NODE_ENV === 'production' ? '/nbaxerrsite' : '',
   images: {
     unoptimized: true,
   },
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/nbaxerrsite' : '',
-  distDir: 'dist',
-  trailingSlash: true,
-  reactStrictMode: true,
-  webpack: (config) => {
-    config.module.rules.push({
-      test: /\.css$/,
-      use: ['style-loader', 'css-loader', 'postcss-loader'],
-    })
-    return config
-  },
+  basePath: '/nbaxerrsite',
+  assetPrefix: '/nbaxerrsite',
 }
 
 module.exports = nextConfig 
