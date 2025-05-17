@@ -16,13 +16,10 @@ export default function Navbar() {
             className="w-[200px] h-[80px] relative transition-transform duration-300 hover:scale-105"
           >
             <Link href={basePath || '/'}>
-              <Image
-                src="/logo.jpg"
+              <img
+                src={`${basePath}/logo.jpg`}
                 alt="NBAXERR Logo"
-                fill
-                className="object-contain"
-                priority
-                sizes="200px"
+                className="w-full h-full object-contain"
               />
             </Link>
           </div>

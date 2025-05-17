@@ -1,7 +1,6 @@
 "use client"
 
 import React, { useState } from 'react'
-import Image from 'next/image'
 import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/24/outline'
 
 interface ProductCardProps {
@@ -18,8 +17,9 @@ export default function ProductCard({ images, title, description }: ProductCardP
       <div className="relative w-full aspect-square">
         <img
           src={images[currentImageIndex]}
-          alt={title}
+          alt={`${title} - Görüntü ${currentImageIndex + 1}`}
           className="absolute inset-0 w-full h-full object-cover"
+          loading="lazy"
         />
         <div className="absolute inset-0 flex items-center justify-between p-4">
           <button
