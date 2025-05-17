@@ -15,7 +15,7 @@ export default function Navbar() {
           >
             <Link href="/">
               <Image
-                src="/PHOTO-2025-04-03-18-50-03.jpg"
+                src="/nbaxerrsite/PHOTO-2025-04-03-18-50-03.jpg"
                 alt="Logo"
                 fill
                 className="object-contain"
