@@ -7,6 +7,16 @@ const config: Config = {
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
+    container: {
+      center: true,
+      padding: {
+        DEFAULT: '1rem',
+        sm: '2rem',
+        lg: '4rem',
+        xl: '5rem',
+        '2xl': '6rem',
+      },
+    },
     extend: {
       colors: {
         primary: {
@@ -18,7 +28,6 @@ const config: Config = {
           DEFAULT: '#1A1A1A',  // Ana koyu gri
           light: '#2D2D2D',    // Açık koyu gri
           lighter: '#3D3D3D',  // Daha açık koyu gri
-          dark: '#111111',     // Daha koyu gri
         }
       },
       animation: {

@@ -41,49 +41,57 @@ const products = [
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-dark-light">
+    <div className="min-h-screen bg-black">
       <Navbar />
       
-      <section className="min-h-screen flex items-center justify-center relative">
-        <div className="absolute inset-0 bg-gradient-to-b from-dark-lighter via-dark-light to-dark opacity-70" />
-        <div className="text-center z-10 px-4">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white">
-            NBAXERR T-Shirt Koleksiyonu
-          </h1>
-          <p className="text-lg md:text-xl text-gray-300 mb-8">
-            Benzersiz Tasarımlar, Yüksek Kalite, Maksimum Konfor
-          </p>
-        </div>
-      </section>
-
-      <section className="container mx-auto px-4 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {products.map((product, index) => (
-            <ProductCard
-              key={index}
-              title={product.title}
-              description={product.description}
-              images={product.images}
-            />
-          ))}
-        </div>
-      </section>
-
-      <section id="contact" className="container mx-auto px-4 py-16">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold mb-8 text-primary">İletişim</h2>
-          <div className="bg-dark p-8 rounded-lg">
-            <p className="text-gray-300 mb-4">
-              <span className="font-medium text-white">Email:</span><br />
-              bugradurgutt@gmail.com
-            </p>
-            <p className="text-gray-300">
-              <span className="font-medium text-white">Instagram:</span><br />
-              @nbaxerr
+      {/* Hero Section */}
+      <section className="pt-24 pb-12">
+        <div className="container mx-auto px-4">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white">
+              NBAXERR T-Shirt Koleksiyonu
+            </h1>
+            <p className="text-lg md:text-xl text-gray-300 mb-8">
+              Benzersiz Tasarımlar, Yüksek Kalite, Maksimum Konfor
             </p>
           </div>
         </div>
       </section>
-    </main>
+
+      {/* Products Grid */}
+      <section className="py-12">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {products.map((product, index) => (
+              <ProductCard
+                key={index}
+                title={product.title}
+                description={product.description}
+                images={product.images}
+              />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section id="contact" className="py-12">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl font-bold mb-8 text-primary">İletişim</h2>
+            <div className="bg-dark/50 backdrop-blur-sm p-8 rounded-lg">
+              <p className="text-gray-300 mb-4">
+                <span className="font-medium text-white">Email:</span><br />
+                bugradurgutt@gmail.com
+              </p>
+              <p className="text-gray-300">
+                <span className="font-medium text-white">Instagram:</span><br />
+                @nbaxerr
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
   )
 }
