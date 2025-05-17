@@ -13,39 +13,24 @@ interface ProductCardProps {
 export default function ProductCard({ images, title, description }: ProductCardProps) {
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
 
-  const handlePrevImage = () => {
-    setCurrentImageIndex((prev) => (prev - 1 + images.length) % images.length)
-  }
-
-  const handleNextImage = () => {
-    setCurrentImageIndex((prev) => (prev + 1) % images.length)
-  }
-
   return (
-    <div className="bg-black/40 backdrop-blur-sm rounded-xl overflow-hidden transform transition-all duration-300 hover:scale-105">
+    <div className="bg-black/40 backdrop-blur-sm rounded-xl overflow-hidden">
       <div className="relative w-full aspect-square">
-        <div key={currentImageIndex} className="absolute inset-0">
-          <Image
-            src={images[currentImageIndex]}
-            alt={title}
-            fill
-            priority
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-            className="object-cover"
-          />
-        </div>
+        <img
+          src={images[currentImageIndex]}
+          alt={title}
+          className="absolute inset-0 w-full h-full object-cover"
+        />
         <div className="absolute inset-0 flex items-center justify-between p-4">
           <button
-            onClick={handlePrevImage}
-            className="p-2 rounded-full bg-primary text-white transform transition-all duration-300 hover:scale-110"
-            aria-label="Önceki resim"
+            onClick={() => setCurrentImageIndex((prev) => (prev - 1 + images.length) % images.length)}
+            className="p-2 rounded-full bg-primary text-white"
           >
             <ChevronLeftIcon className="w-6 h-6" />
           </button>
           <button
-            onClick={handleNextImage}
-            className="p-2 rounded-full bg-primary text-white transform transition-all duration-300 hover:scale-110"
-            aria-label="Sonraki resim"
+            onClick={() => setCurrentImageIndex((prev) => (prev + 1) % images.length)}
+            className="p-2 rounded-full bg-primary text-white"
           >
             <ChevronRightIcon className="w-6 h-6" />
           </button>
