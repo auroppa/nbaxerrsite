@@ -22,14 +22,14 @@ export default function ProductCard({ images, title, description }: ProductCardP
   }
 
   return (
-    <div className="bg-black/40 backdrop-blur-sm rounded-xl overflow-hidden hover:shadow-xl hover:shadow-primary/20 transition-all duration-300">
-      <div className="relative aspect-square bg-black rounded-t-xl overflow-hidden group">
-        <div className="relative w-full h-full transition-opacity duration-300">
+    <div className="bg-dark-light rounded-xl overflow-hidden shadow-lg hover:shadow-xl hover:shadow-primary/20 transition-all duration-300">
+      <div className="relative w-full aspect-square bg-black rounded-t-xl overflow-hidden group">
+        <div className="relative w-full h-full">
           <Image
             src={`/nbaxerrsite${images[currentImageIndex]}`}
             alt={`${title} - Görüntü ${currentImageIndex + 1}`}
             fill
-            className="object-cover"
+            className="object-contain p-4"
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             priority
           />

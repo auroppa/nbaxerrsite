@@ -35,66 +35,52 @@ const products = [
     description: "Özel koleksiyon, limitli üretim, premium kalite t-shirt.",
     images: ["/tshirts/tshirt6-front.png", "/tshirts/tshirt6-back.png"]
   },
-  {
-    title: "Limited Edition T-Shirt",
-    description: "Özel seri, benzersiz tasarım, sınırlı sayıda üretilen t-shirt.",
-    images: ["/tshirts/tshirt7-front.png", "/tshirts/tshirt7-back.png"]
-  }
 ]
 
-export default function Home(): JSX.Element {
+export default function Home() {
   return (
-    <main className="min-h-screen bg-dark-light">
+    <main className="min-h-screen bg-black">
       <Navbar />
       
       {/* Hero Section */}
-      <section className="h-screen flex items-center justify-center relative">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-dark-lighter via-dark-light to-dark opacity-70" />
-        
-        <div className="text-center z-10 px-4">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white">
+      <section className="pt-24 pb-12 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary text-center mb-6">
             NBAXERR T-Shirt Koleksiyonu
           </h1>
-          <p className="text-lg md:text-xl text-gray-300 mb-8">
+          <p className="text-xl text-white/80 text-center mb-12">
             Benzersiz Tasarımlar, Yüksek Kalite, Maksimum Konfor
           </p>
         </div>
       </section>
 
       {/* Products Grid */}
-      <section className="container mx-auto px-4 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {products.map((product, index) => (
-            <ProductCard 
-              key={index}
-              title={product.title}
-              description={product.description}
-              images={product.images}
-            />
-          ))}
+      <section id="products" className="py-12 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {products.map((product, index) => (
+              <ProductCard
+                key={index}
+                title={product.title}
+                description={product.description}
+                images={product.images}
+              />
+            ))}
+          </div>
         </div>
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="container mx-auto px-4 py-16 bg-dark-lighter rounded-xl my-16">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold mb-8 text-primary">İletişim</h2>
-          <p className="text-lg text-gray-300 mb-12">
-            Sorularınız veya siparişleriniz için bizimle iletişime geçebilirsiniz.
-          </p>
-          
-          <div className="bg-dark p-8 rounded-lg max-w-xl mx-auto">
-            <h3 className="text-xl font-semibold mb-4 text-primary">İletişim Bilgileri</h3>
-            <div className="space-y-4">
-              <p className="text-gray-300">
-                <span className="font-medium text-white">Email:</span><br />
-                bugradurgutt@gmail.com
-              </p>
-              <p className="text-gray-300 mt-4">
-                <span className="font-medium text-white">Instagram:</span><br />
-                @nbaxerr
-              </p>
-            </div>
+      <section id="contact" className="py-16 px-4 sm:px-6 lg:px-8 bg-dark-light">
+        <div className="max-w-7xl mx-auto text-center">
+          <h2 className="text-3xl font-bold text-primary mb-8">İletişim</h2>
+          <div className="space-y-4">
+            <p className="text-white/80">
+              Instagram: <a href="https://instagram.com/nbaxerr" className="text-primary hover:text-primary-light transition-colors">@nbaxerr</a>
+            </p>
+            <p className="text-white/80">
+              E-posta: <a href="mailto:bugradurgutt@gmail.com" className="text-primary hover:text-primary-light transition-colors">bugradurgutt@gmail.com</a>
+            </p>
           </div>
         </div>
       </section>
