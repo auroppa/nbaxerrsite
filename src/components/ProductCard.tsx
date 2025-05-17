@@ -20,8 +20,9 @@ export default function ProductCard({ images, title, description }: ProductCardP
           src={images[currentImageIndex]}
           alt={title}
           fill
+          priority
+          loading="eager"
           className="object-cover"
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
         <div className="absolute inset-0 flex items-center justify-between p-4">
           <button
