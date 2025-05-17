@@ -26,11 +26,12 @@ export default function ProductCard({ images, title, description }: ProductCardP
       <div className="relative aspect-square bg-black rounded-t-xl overflow-hidden group">
         <div className="relative w-full h-full transition-opacity duration-300">
           <Image
-            src={images[currentImageIndex]}
+            src={`/nbaxerrsite${images[currentImageIndex]}`}
             alt={`${title} - Görüntü ${currentImageIndex + 1}`}
             fill
             className="object-cover"
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            priority
           />
         </div>
 
