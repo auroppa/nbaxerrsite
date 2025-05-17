@@ -62,12 +62,13 @@ export default function Home() {
       <section className="container mx-auto px-4 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {products.map((product, index) => (
-            <ProductCard
-              key={index}
-              title={product.title}
-              description={product.description}
-              images={product.images}
-            />
+            <div key={index} className="w-full">
+              <ProductCard
+                title={product.title}
+                description={product.description}
+                images={product.images}
+              />
+            </div>
           ))}
         </div>
       </section>

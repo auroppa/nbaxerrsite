@@ -22,9 +22,9 @@ export default function ProductCard({ images, title, description }: ProductCardP
   }
 
   return (
-    <div className="bg-black/40 backdrop-blur-sm rounded-xl overflow-hidden hover:shadow-xl hover:shadow-primary/20 transition-all duration-300">
+    <div className="h-full bg-black/40 backdrop-blur-sm rounded-xl overflow-hidden hover:shadow-xl hover:shadow-primary/20 transition-all duration-300">
       <div className="relative aspect-square bg-black rounded-t-xl overflow-hidden group">
-        <div className="relative w-full h-full transition-opacity duration-300">
+        <div className="relative w-full h-full">
           <Image
             src={images[currentImageIndex]}
             alt={`${title} - Görüntü ${currentImageIndex + 1}`}
