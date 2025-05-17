@@ -26,7 +26,7 @@ export default function ProductCard({ images, title, description }: ProductCardP
       <div className="relative aspect-square bg-black rounded-t-xl overflow-hidden group">
         <div className="relative w-full h-full transition-opacity duration-300">
           <Image
-            src={`/nbaxerrsite${images[currentImageIndex]}`}
+            src={images[currentImageIndex]}
             alt={`${title} - Görüntü ${currentImageIndex + 1}`}
             fill
             className="object-cover"

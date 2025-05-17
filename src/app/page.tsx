@@ -8,32 +8,32 @@ const products = [
   {
     title: "Klasik Siyah T-Shirt",
     description: "Temel gardırobunuzun vazgeçilmezi, %100 pamuklu premium siyah t-shirt.",
-    images: ["/tshirts/tshirt1-front.png", "/tshirts/tshirt1-back.png"]
+    images: ["/nbaxerrsite/tshirts/tshirt1-front.png", "/nbaxerrsite/tshirts/tshirt1-back.png"]
   },
   {
     title: "Vintage Tasarım T-Shirt",
     description: "Retro desenli, yumuşak dokulu, rahat kesim t-shirt.",
-    images: ["/tshirts/tshirt2-front.png", "/tshirts/tshirt2-back.png"]
+    images: ["/nbaxerrsite/tshirts/tshirt2-front.png", "/nbaxerrsite/tshirts/tshirt2-back.png"]
   },
   {
     title: "Urban Style T-Shirt",
     description: "Modern şehir yaşamı için tasarlanmış, şık ve rahat t-shirt.",
-    images: ["/tshirts/tshirt3-front.png", "/tshirts/tshirt3-back.png"]
+    images: ["/nbaxerrsite/tshirts/tshirt3-front.png", "/nbaxerrsite/tshirts/tshirt3-back.png"]
   },
   {
     title: "Minimalist T-Shirt",
     description: "Sade tasarımı ve kaliteli kumaşıyla öne çıkan t-shirt.",
-    images: ["/tshirts/tshirt4-front.png", "/tshirts/tshirt4-back.png"]
+    images: ["/nbaxerrsite/tshirts/tshirt4-front.png", "/nbaxerrsite/tshirts/tshirt4-back.png"]
   },
   {
     title: "Grafik Desenli T-Shirt",
     description: "Özel tasarım baskısıyla dikkat çeken, yüksek kaliteli t-shirt.",
-    images: ["/tshirts/tshirt5-front.png", "/tshirts/tshirt5-back.png"]
+    images: ["/nbaxerrsite/tshirts/tshirt5-front.png", "/nbaxerrsite/tshirts/tshirt5-back.png"]
   },
   {
     title: "Premium Collection T-Shirt",
     description: "Özel koleksiyon, limitli üretim, premium kalite t-shirt.",
-    images: ["/tshirts/tshirt6-front.png", "/tshirts/tshirt6-back.png"]
+    images: ["/nbaxerrsite/tshirts/tshirt6-front.png", "/nbaxerrsite/tshirts/tshirt6-back.png"]
   },
 ]
 
