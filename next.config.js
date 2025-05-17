@@ -4,8 +4,11 @@ const nextConfig = {
   basePath: '/nbaxerrsite',
   images: {
     unoptimized: true,
+    loader: 'custom',
+    loaderFile: './image-loader.js'
   },
   assetPrefix: '/nbaxerrsite/',
+  trailingSlash: true,
 }
 
 module.exports = nextConfig 
