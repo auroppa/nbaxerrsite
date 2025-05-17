@@ -3,12 +3,17 @@ const nextConfig = {
   output: 'export',
   images: {
     unoptimized: true,
-    loader: 'custom',
-    loaderFile: './src/utils/imageLoader.ts',
+    remotePatterns: [],
   },
-  basePath: '/nbaxerrsite',
-  assetPrefix: '/nbaxerrsite',
+  basePath: process.env.NODE_ENV === 'production' ? '/nbaxerrsite' : '',
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/nbaxerrsite' : '',
+  reactStrictMode: true,
+  swcMinify: true,
   trailingSlash: true,
+  webpack: (config) => {
+    config.resolve.fallback = { fs: false, path: false };
+    return config;
+  },
 }
 
 module.exports = nextConfig 
