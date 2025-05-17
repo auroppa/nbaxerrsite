@@ -3,6 +3,8 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
+const basePath = process.env.NODE_ENV === 'production' ? '/nbaxerrsite' : ''
+
 export default function Navbar() {
   return (
     <nav 
@@ -15,7 +17,7 @@ export default function Navbar() {
           >
             <Link href="/">
               <Image
-                src="/nbaxerrsite/PHOTO-2025-04-03-18-50-03.jpg"
+                src={`${basePath}/PHOTO-2025-04-03-18-50-03.jpg`}
                 alt="Logo"
                 fill
                 className="object-contain"
